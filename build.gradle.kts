@@ -21,14 +21,6 @@ detekt {
 	buildUponDefaultConfig = true // preconfigure defaults
 	allRules = false // activate all available (even unstable) rules.
 	config = files("$projectDir/config/detekt.yml") // point to your custom config defining rules to run, overwriting default behavior
-	source = files(
-		subprojects.flatMap {
-			listOf(
-				"${it.projectDir}/src/main/kotlin",
-				"${it.projectDir}/src/test/kotlin"
-			)
-		}
-	)
 }
 
 dependencies {
