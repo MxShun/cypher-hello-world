@@ -1,5 +1,5 @@
 package cypher.helloworld.entity
 
-class Greet(
+class Reply(
     val message: String,
 )
