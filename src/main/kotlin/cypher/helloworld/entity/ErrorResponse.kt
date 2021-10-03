@@ -1,5 +1,5 @@
 package cypher.helloworld.entity
 
-class ErrorInformation(
+class ErrorResponse(
     val reason: String,
 )

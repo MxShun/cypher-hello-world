@@ -1,6 +1,6 @@
 package cypher.helloworld.advice
 
-import cypher.helloworld.entity.ErrorInformation
+import cypher.helloworld.entity.ErrorResponse
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseBody
@@ -13,5 +13,5 @@ class ExceptionHandlerAdvice {
     @ExceptionHandler(NoHandlerFoundException::class)
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     @ResponseBody
-    fun handleNoHandlerFoundException(): ErrorInformation = ErrorInformation(reason = "no handler found")
+    fun handleNoHandlerFoundException(): ErrorResponse = ErrorResponse(reason = "no handler found")
 }
