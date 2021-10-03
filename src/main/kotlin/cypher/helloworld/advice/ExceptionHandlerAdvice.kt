@@ -12,6 +12,5 @@ import org.springframework.web.servlet.NoHandlerFoundException
 class ExceptionHandlerAdvice {
     @ExceptionHandler(NoHandlerFoundException::class)
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
-    @ResponseBody
     fun handleNoHandlerFoundException(): ErrorResponse = ErrorResponse(reason = "no handler found")
 }
