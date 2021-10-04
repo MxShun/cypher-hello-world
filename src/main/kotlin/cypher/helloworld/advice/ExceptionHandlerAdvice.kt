@@ -12,4 +12,8 @@ class ExceptionHandlerAdvice {
     @ExceptionHandler(NoHandlerFoundException::class)
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     fun handleNoHandlerFoundException(): ErrorResponse = ErrorResponse(reason = "no handler found")
+
+    @ExceptionHandler(Exception::class)
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    fun handleException(): ErrorResponse = ErrorResponse(reason = "something wrong ;-(")
 }
