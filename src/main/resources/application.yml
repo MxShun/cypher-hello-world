@@ -5,3 +5,7 @@ spring:
   web:
     resources:
       add-mappings: false
+server:
+  error:
+    whitelabel:
+      enabled: false
