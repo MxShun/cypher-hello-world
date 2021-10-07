@@ -9,3 +9,13 @@ server:
   error:
     whitelabel:
       enabled: false
+
+helloworld:
+  text: my best friend
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+helloworld:
+  text: my friend
