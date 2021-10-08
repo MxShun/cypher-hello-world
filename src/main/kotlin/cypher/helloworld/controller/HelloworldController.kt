@@ -1,7 +1,7 @@
 package cypher.helloworld.controller
 
 import cypher.helloworld.entity.Reply
-import org.apache.commons.logging.LogFactory
+import mu.KotlinLogging
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.GetMapping
@@ -24,6 +24,6 @@ class HelloworldController {
     companion object {
         private const val NAME_MINIMUM_LENGTH = 3
         private const val NAME_MAXIMUM_LENGTH = 10
-        private val logger = LogFactory.getLog(HelloworldController::class.java)
+        private val logger = KotlinLogging.logger {}
     }
 }
