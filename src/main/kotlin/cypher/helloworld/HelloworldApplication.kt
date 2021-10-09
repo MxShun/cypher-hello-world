@@ -7,4 +7,6 @@ import org.springframework.boot.runApplication
 class HelloworldApplication
 
 @Suppress("SpreadOperator")
-fun main(args: Array<String>) { runApplication<HelloworldApplication> (*args) }
+fun main(args: Array<String>) {
+    runApplication<HelloworldApplication>(*args)
+}
