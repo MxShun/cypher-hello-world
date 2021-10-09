@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--  https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.logging  -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <springProfile name="dev">
+        <logger name="cypher.helloworld.controller.HelloworldController" level="DEBUG"/>
+    </springProfile>
+</configuration>
