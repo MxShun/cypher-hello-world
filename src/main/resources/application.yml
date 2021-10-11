@@ -14,17 +14,16 @@ server:
     whitelabel:
       enabled: false
   shutdown: graceful # default lifecycle 30s
-
 helloworld:
   text: my best friend
 ---
-management:
-  endpoint:
-    health:
-      enabled: true
 spring:
   config:
     activate:
       on-profile: dev
+management:
+  endpoint:
+    health:
+      enabled: true
 helloworld:
   text: my friend
