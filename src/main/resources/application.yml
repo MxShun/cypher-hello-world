@@ -9,7 +9,7 @@ server:
   error:
     whitelabel:
       enabled: false
-
+  shutdown: graceful # default lifecycle 30s
 helloworld:
   text: my best friend
 ---
